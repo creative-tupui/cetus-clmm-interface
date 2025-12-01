@@ -31,7 +31,7 @@ module cetusclmm::pool {
     // === Struct ===
 
     
-    /// One-Time-Witness for the module.
+    /// One-Time-Witness for the module
     struct POOL has drop {}
 
     
@@ -157,7 +157,7 @@ module cetusclmm::pool {
     // === Events ===
 
     
-    /// Emited when a position was opened.
+    /// Emited when a position was opened
     struct OpenPositionEvent has copy, drop, store {
         pool: ID,
         tick_lower: I32,
@@ -166,14 +166,14 @@ module cetusclmm::pool {
     }
 
     
-    /// Emited when a position was closed.
+    /// Emited when a position was closed
     struct ClosePositionEvent has copy, drop, store {
         pool: ID,
         position: ID,
     }
 
     
-    /// Emited when add liquidity for a position.
+    /// Emited when add liquidity for a position
     struct AddLiquidityEvent has copy, drop, store {
         pool: ID,
         position: ID,
