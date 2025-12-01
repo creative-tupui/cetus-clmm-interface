@@ -101,7 +101,7 @@ module cetusclmm::pool {
     }
 
     
-    /// Flash loan resource for swap.
+    /// Flash loan resource for swap
     /// There is no way in Move to pass calldata and make dynamic calls, but a resource can be used for this purpose.
     /// To make the execution into a single transaction, the flash loan function must return a resource
     /// that cannot be copied, cannot be saved, cannot be dropped, or cloned.
@@ -186,7 +186,7 @@ module cetusclmm::pool {
     }
 
     
-    /// Emited when remove liquidity from a position.
+    /// Emited when remove liquidity from a position
     struct RemoveLiquidityEvent has copy, drop, store {
         pool: ID,
         position: ID,
@@ -199,7 +199,7 @@ module cetusclmm::pool {
     }
 
     
-    /// Emited when swap in a clmmpool.
+    /// Emited when swap in a clmmpool
     struct SwapEvent has copy, drop, store {
         atob: bool,
         pool: ID,
@@ -216,7 +216,7 @@ module cetusclmm::pool {
     }
 
     
-    /// Emited when the protocol manager collect protocol fee from clmmpool.
+    /// Emited when the protocol manager collect protocol fee from clmmpool
     struct CollectProtocolFeeEvent has copy, drop, store {
         pool: ID,
         amount_a: u64,
@@ -224,7 +224,7 @@ module cetusclmm::pool {
     }
 
     
-    /// Emited when user collect liquidity fee from a position.
+    /// Emited when user collect liquidity fee from a position
     struct CollectFeeEvent has copy, drop, store {
         position: ID,
         pool: ID,
@@ -233,7 +233,7 @@ module cetusclmm::pool {
     }
 
     
-    /// Emited when the clmmpool's liqudity fee rate had updated.
+    /// Emited when the clmmpool's liqudity fee rate had updated
     struct UpdateFeeRateEvent has copy, drop, store {
         pool: ID,
         old_fee_rate: u64,
@@ -241,7 +241,7 @@ module cetusclmm::pool {
     }
 
     
-    /// Emited when the rewarder's emission per second had updated.
+    /// Emited when the rewarder's emission per second had updated
     struct UpdateEmissionEvent has copy, drop, store {
         pool: ID,
         rewarder_type: TypeName,
@@ -249,14 +249,14 @@ module cetusclmm::pool {
     }
 
     
-    /// Emited when a rewarder append to clmmpool.
+    /// Emited when a rewarder append to clmmpool
     struct AddRewarderEvent has copy, drop, store {
         pool: ID,
         rewarder_type: TypeName,
     }
 
     
-    /// Emited when collect reward from clmmpool's rewarder.
+    /// Emited when collect reward from clmmpool's rewarder
     struct CollectRewardEvent has copy, drop, store {
         position: ID,
         pool: ID,
@@ -270,7 +270,7 @@ module cetusclmm::pool {
         amount: u64,
     }
 
-    /// Emited when flash loan in a clmmpool.
+    /// Emited when flash loan in a clmmpool
     struct FlashLoanEvent has copy, drop, store {
         pool: ID,
         loan_a: bool,
